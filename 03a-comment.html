@@ -1,0 +1,24 @@
+<script src='https://cdns.gigya.com/JS/socialize.js?apiKey=2_VlVGsWWoM3S4JNJr0cwrLChl9vudyorQosdeAZpeh4KfLOGONIHlH8jGocejwWMr' type='text/javascript'></script>
+<div id='commentsDiv'></div>
+<script type='text/javascript'>
+var conf = {}
+var params ={
+categoryID: '27234322',
+streamID: '',
+containerID: 'commentsDiv',
+cid:'',
+callback:function(e) {console.log(e)}
+}
+gigya.services.socialize.showCommentsUI(conf,params)
+
+gigya.services.socialize.addEventHandlers({   
+    onLogin:function(e) {console.log(e)},  
+    onConnectionAdded:function(e) {console.log(e)},  
+    onConnectionRemoved:function(e) {console.log(e)}
+   }  
+);  
+
+// 
+gigya.services.comments.getComments(params);  
+
+</script>

@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+  <head>
+    <title>
+      Comment Binding
+    </title>
+  </head>
+  <body>
+
+
+    <h1>CommentUI</h1>
+
+    <div style="border: 1px solid red" id="commentui"></div>
+
+    <h1>Comment Core</h1>
+
+    <form id="comment-core" action="" method="get">
+      <textarea name="comment">My Comment</textarea>
+      <button type="submit">Submit Comment</button>
+    </form>
+
+    <h1>TPC</h1>
+
+    <div class="grid_8 alpha color19 text13"> <form action="http://www.classmates.com/feature/globalaction/save.post" name="tpcDetailCommentForm" id="addComment" method="POST" class="space3padLR space3padT"> <input type="hidden" name="context" value="tpc/286575"> <input type="hidden" name="actionableId" value="286575"> <input type="hidden" name="actionableType" value="tpc"> <input type="hidden" name="actionTypeId" value="2"> <input type="hidden" name="successView" value="/ajax/ajax_tpcComments?actionableType=tpc&amp;actionableId=286575"> <textarea row="1" cols="1" class="hide" name="addedComment">false</textarea> <input type="hidden" name="sat" id="sat" value="85bcb16b1460fa06b5b41c343d2c8542b85c0d3d"> <h3> <label for="comment">Share your memories</label> </h3> <textarea name="actionContent" id="comment" rows="8" cols="55" data-hint=" " class="hintTxt"></textarea> </form> <label class="remaining text1 space3padL" data-forid="comment" id="actionContentLabel" data-maxchars="1000">&nbsp;</label> <p class="space3pad txtRight"> <button id="addCommentBtn" class="btn2 disabled" type="submit" disabled=""> Add your comment </button> </p> </div>
+
+    <hr/>
+
+    <script src="lib/jquery-1.6.1-min.js"></script>
+    <script src="lib/coffee-script.js">
+    </script>
+    <script type="text/coffeescript">
+      console.log 'CoffeeScript enabled.'
+    </script>
+    <script type="text/coffeescript" src="coffee/config.coffee">
+    </script>
+    <script type="text/coffeescript" src="coffee/03-comment.coffee">
+    </script>
+
+
+  </body>
+</html>

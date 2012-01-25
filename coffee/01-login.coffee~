@@ -1,0 +1,20 @@
+# dependency: config.coffee
+# http://developers.gigya.com/020_Client_API/020_Methods/Socialize.showLoginUI
+# http://wiki.gigya.com/010_Developer_Guide/10_Social_Login/001_Quick_start
+
+
+$.getScript "http://cdn.gigya.com/JS/socialize.js?apikey=#{GIGYA_CONFIG.APIKey}", ->
+    PARAMS_LOGIN =
+    containerID: "login"
+    redirectURL: "http://wal.sh/poc/gigya/01-login.html"
+
+    gigya.services.socialize.showLoginUI GIGYA_CONFIG, PARAMS_LOGIN
+
+    #        http://developers.gigya.com/020_Client_API/020_Methods/socialize.getUserInfo
+    PARAMS_USER =
+    callback: (response) -> console.log response
+
+    gigya.services.socialize.getUserInfo GIGYA_CONFIG, PARAMS_USER
+
+
+

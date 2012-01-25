@@ -1,0 +1,31 @@
+console.log "Loaded 02-share"
+
+$.getScript "http://cdn.gigya.com/JS/socialize.js?apikey=#{GIGYA_CONFIG.APIKey}", ->
+
+  showShareUI = () ->
+    act = new gigya.services.socialize.UserAction()
+
+    act.setTitle $('#title').html()
+    act.setDescription $('#description').html()
+    act.addMediaItem {
+      type: 'image'
+      src: $('#media-item').attr('src')
+      href: $('#media-link').attr('href')  }
+
+    PARAMS_SHARE =
+        userAction: act
+
+    $('#like').bind 'click',
+      ->
+        gigya.services.socialize.showShareUI GIGYA_CONFIG, PARAMS_SHARE
+
+
+  isGigyaLoaded = () ->
+    if (typeof gigya == 'undefined')
+      console.log "Gigya undefined "
+      setTimeout(isGigyaLoaded, 200)
+    else
+      showShareUI();
+
+
+  isGigyaLoaded()

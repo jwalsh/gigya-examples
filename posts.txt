@@ -1,0 +1,44 @@
+gigya.global.JPCMD.prototype.hanldeJPResponse({
+  "statusCode": 200,
+  "errorCode": 0,
+  "statusReason": "OK",
+  "callId": "6755161618aa49b0b8be67ba8f58cf0f",
+  "providerErrorCodes": [
+    {
+      "provider": "myspace",
+      "errorCode": 0,
+      "errorMessage": "OK"
+    },
+    {
+      "provider": "twitter",
+      "errorCode": 403024,
+      "errorMessage": "Provider limit reached",
+      "errorDetails": "Limit reached: Status is a duplicate."
+    },
+    {
+      "provider": "linkedin",
+      "errorCode": 0,
+      "errorMessage": "OK"
+    },
+    {
+      "provider": "yahoo",
+      "errorCode": 0,
+      "errorMessage": "OK"
+    },
+    {
+      "provider": "orkut",
+      "errorCode": 0,
+      "errorMessage": "OK"
+    },
+    {
+      "provider": "facebook",
+      "errorCode": 0,
+      "errorMessage": "OK"
+    }
+  ],
+  "context": "R1310149870041_0.21708885999396443",
+  "providerPostIDs": {
+    "yahoo": "HWQPQQYDEOIAXB7IEVAQAFCFIE634457322766470640",
+    "facebook": "1178471455_2067271319572"
+  }
+});
